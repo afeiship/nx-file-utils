@@ -1,0 +1,24 @@
+{
+  "name": "nx-file-utils",
+  "version": "1.0.0",
+  "description": "File utils for nx.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "clean": "rm -rf *.gem",
+    "build": "gem build *.gemspec",
+    "pubpush": "gem push *.gem",
+    "unpublish":"gem yank nx-http -v '0.1.0'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/nx-file-utils.git"
+  },
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/nx-file-utils/issues"
+  },
+  "homepage": "https://github.com/afeiship/nx-file-utils#readme"
+}
