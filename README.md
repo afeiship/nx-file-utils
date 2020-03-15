@@ -11,9 +11,13 @@ gem 'nx-file-utils', git: 'git@github.com:afeiship/nx-file-utils.git'
 
 ## usage
 ```rb
-Nx::FileUtils::hello
+require "nx-file-utils"
 
-# hello world
+puts Nx::FileUtils.sanitize("HTML5 Canvas核心技术/图形、动画与游戏开发.pdf")
+puts Nx::FileUtils.ordinal("HTML5 Canvas核心技术/图形、动画与游戏开发.pdf")
+
+# HTML5Canvas核心技术_图形_动画与游戏开发.pdf
+# 000_HTML5 Canvas核心技术/图形、动画与游戏开发.pdf
 ```
 
 ## build/publish
