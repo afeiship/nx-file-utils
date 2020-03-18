@@ -7,7 +7,6 @@ module Nx
         bad_chars = ["/", '\\', "?", "%", "*", "|", '"', "<", ">", "-", "（", "(", "）", ")", "、"]
         bad_chars.each do |char|
           in_name.gsub!(" ", "")
-          in_name.gsub!("：", ":")
           in_name.gsub!("，", ",")
           in_name.gsub!(char, "_")
         end
@@ -20,6 +19,11 @@ module Nx
         options = default_options.merge(in_options)
         prefix = options[:number].to_s.rjust(options[:width], options[:char])
         prefix + options[:separator] + in_name
+      end
+
+      def rename(in_name, in_new_name)
+        file = File.basename in_name
+        dir = File.dirname in_name
       end
     end
   end
