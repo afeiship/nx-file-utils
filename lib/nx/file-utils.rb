@@ -4,7 +4,7 @@ module Nx
   class FileUtils
     class << self
       def sanitize(in_name)
-        bad_chars = ["/", '\\', "?", "%", "*", "|", '"', "<", ">", "-", "（", "(", "）", ")", "、"]
+        bad_chars = ["/", '\\', "?", "%", "*", "|", '"', "<", ">", "-", "（", "(", "）", ")", "、", "："]
         bad_chars.each do |char|
           in_name.gsub!(" ", "")
           in_name.gsub!("，", ",")
