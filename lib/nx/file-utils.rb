@@ -21,9 +21,13 @@ module Nx
         prefix + options[:separator] + in_name
       end
 
-      def rename(in_name, in_new_name)
+      def strip_name(in_name)
         file = File.basename in_name
         dir = File.dirname in_name
+        puts file
+        puts dir
+        new_filename = File.join(dir, sanitize(file))
+        File.rename(in_name, new_filename)
       end
     end
   end
